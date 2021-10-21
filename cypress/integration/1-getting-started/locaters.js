@@ -9,14 +9,14 @@ describe('locating elements in ', () => {
         cy.get('.L0Z3Pu').click();  //searchicon
         cy.wait(3000);
         // productlink
-        cy.get("[src='https://rukminim1.flixcart.com/image/495/594/kg9qbgw0-0/shoe/b/5/d/pn-168-169-170-171-172-8-chevit-multicolor-original-imafwjjf3dzyg6wf.jpeg?q=50']");
-        
+        /*cy.get("img[src*='https://rukminim1.flixcart.com/image/495/594/kmwcuq80/shoe/w/u']").click();*/
+        cy.get('[data-id="SHOGFPAZSUAMGMKG"] > ._1xHGtK > ._2UzuFa > :nth-child(1) > :nth-child(1) > ._3ywSr_ > ._312yBx > ._2r_T1I').click()
         cy.wait(5000);
-        cy.get('._2KpZ6l _2U9uOA _3v1-ww').click(); // addtocart 
-        cy.get('#swatch-0-size > a').click(); //sizeof shoe
-        cy.get('._2KpZ6l _2U9uOA _3v1-ww').click(); // addtocart 
+        cy.get('button[xpath=1]').click(); // addtocart 
+        cy.get('a[xpath=1]').click(); //sizeof shoe
+        cy.get('button[xpath=1]').click(); // addtocart 
         cy.wait(3000);
-        cy.get('._2-ut7f _1WpvJ7').contains('₹471'); // validate the price
+        cy.get('span[css=1]').contains('₹299'); // validate the price
 
 
     });
